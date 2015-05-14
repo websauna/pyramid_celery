@@ -190,6 +190,8 @@ and then update your ``[loggers]`` section to include it.
 Celery worker processes do not propagade exceptions inside tasks, but swallow them 
 silently by default. To see if your tasks fail you need to configure another logger:
 
+.. code-block:: ini
+
     # See https://github.com/celery/celery/issues/2437
     [logger_celery_worker_job]
     level = ERROR
